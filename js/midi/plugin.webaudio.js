@@ -8,7 +8,7 @@
 
 (function(root) { 'use strict';
 
-	window.AudioContext && (function() {
+	(window.webkitAudioContext || window.AudioContext) && (function() {
 		var audioContext = null; // new AudioContext();
 		var useStreamingBuffer = false; // !!audioContext.createMediaElementSource;
 		var midi = root.WebAudio = {api: 'webaudio'};
